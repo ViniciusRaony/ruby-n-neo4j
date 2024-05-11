@@ -1,0 +1,23 @@
+version: '3.1'
+
+services:
+  neo4j:
+    image: neo4j:latest
+    restart: always
+    ports:
+      - 7474:7474 # GUI Neo4j Browser
+      - 7687:7687 # BD
+    environment:
+      NEO4J_AUTH: ${NEO4J_USERNAME}/${NEO4J_PASSWORD}
+
+  contact_manager_cli:
+    build: .
+    container_name: contact_manager_app
+    volumes:
+      - ./code:/code
+    restart: always
+    environment:
+      NEO4J_USERNAME: ${NEO4J_USERNAME}
+      NEO4J_PASSWORD: ${NEO4J_PASSWORD}
+      NEO4J_HOST: ${MONGO_HOST}
+      NEO4J_PORT: ${MONGO_PORT}
