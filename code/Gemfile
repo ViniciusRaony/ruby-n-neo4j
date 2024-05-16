@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
-ruby '3.0.2'
+ruby '3.2.3'
 
-gem 'neo4j', '9.6.1'
+gem 'neo4j-ruby-driver', '~> 4.4'
+gem 'activegraph', '~> 11.0'
+gem 'activesupport', '~> 6.1.4'
+gem 'zeitwerk', '~> 2.6'
+gem 'rbtree', '~> 0.4.6'
+gem 'rake', '~> 13.0'
