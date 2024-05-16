@@ -1,7 +1,7 @@
-require 'neo4j'
+require 'active_graph'
 
 class Contact
-  include Neo4j::ActiveNode
+  include ActiveGraph::Node
 
   property :name, type: String
   property :phone, type: String
