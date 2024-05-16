@@ -1,0 +1,8 @@
+development:
+  type: bolt
+  host: <%= ENV['NEO4J_HOST'] %>
+  port: <%= ENV['NEO4J_PORT'] %>
+  username: <%= ENV['NEO4J_USERNAME'] %>
+  password: <%= ENV['NEO4J_PASSWORD'] %>
+
+
