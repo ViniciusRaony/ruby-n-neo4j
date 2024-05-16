@@ -1,6 +1,8 @@
-FROM ruby:3.0.2-slim
+FROM ruby:3.2.3-slim
 
-RUN apt-get update -qq && apt-get install -y build-essential bash
+RUN apt-get update -qq \
+    && apt-get install -y build-essential bash \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /code
 
@@ -8,9 +10,9 @@ WORKDIR /code
 COPY code/Gemfile /code/Gemfile
 COPY code/Gemfile.lock /code/Gemfile.lock
 
-# Install depedencies
-RUN gem install bundler -v 2.3.5
-RUN bundle _2.3.5_ install
+# Install dependencies
+RUN gem install bundler
+RUN bundle install
 
 COPY code /code
 
