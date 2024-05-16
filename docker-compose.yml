@@ -19,5 +19,5 @@ services:
     environment:
       NEO4J_USERNAME: ${NEO4J_USERNAME}
       NEO4J_PASSWORD: ${NEO4J_PASSWORD}
-      NEO4J_HOST: ${MONGO_HOST}
-      NEO4J_PORT: ${MONGO_PORT}
+      NEO4J_HOST: ${NEO4J_HOST}
+      NEO4J_PORT: ${NEO4J_PORT}
